@@ -413,6 +413,8 @@ Neste exercício os comandos deveriam ser executados durante a execução de um 
 `docker rm {id do container}`
 ### Remove/exclui um determinado container
 
+--------------------------------------------------------------------------
+
 ## 4º Exercício:
 Este exercício requisitou bastante de mim em comparação aos outros, mas mesmo assim a resolução era relativamente simples, somente tive dificuldade com a API pois a documentação dela estava descontinuada mas ainda funcionava.
 Em primeiro momento tive que criar um arquivo python para chamar a API, também criei um arquivo requirements.txt para colocar os arquivos necessários no momentos da instalação do python no container e tudo isso foi configurado no Dockerfile
@@ -465,6 +467,8 @@ CMD ["flask","run","--host=0.0.0.0"]
 ```
 
 Por fim a criação da imagem do container e feita atráves do comando `docker build -t {nome da imagem} .` que cria a imagem com base no Dockerfile (deve ser executado dentro da mesma pasta que se encontra o Dockerfile) e para executar o container com esta imagem utilize o comando `docker run -p 5000:5000 {nome da imagem}` ápos isso será necessário acessar o endereço `http://localhost:5000` para ter a visualização da pagina com o Hello World!.
+
+--------------------------------------------------------------------------
 
 ## 5º Exercício
 Aqui começamos os exercícios de nível médio, neste exercício eu tive muita dificuldade pois não entendia muito bem como funcionava a tecnologia do Laravel Breeze, e por tanto eu acabei tendo muita dificuldade, tanto que nem sei si consegui atingir o resultado esperado ao finalizar tal exercício:
@@ -616,6 +620,8 @@ DB_PASSWORD=secret
 ```
 Executamos a migração para a criação da tabela de usuários `php artisan migrate` e por final para testar fazemos o acesso via `http://localhost:8000`
 Como dito anteriormente, a idéia era utilizar o Laravel Breeze como um sistema de registro e o MySQL faria o armazenamento destes dados porém não consegui chegar num resultado que aparentava estabelecer esta solução mas em decorrência disto notasse que foi usado ambos os serviços tanto quanto o Laravel quanto o MySQL unicamente a parte de registro e feita, entretanto em demasia de tentativas não fora encontrada uma solução para tal ocorrência.
+
+--------------------------------------------------------------------------
 
 ## 6º Exercício
 Este exercício não foi tão complicado quanto o anterior pelo fato de eu já ter visto uma aplicabilidade semelhante a requisitada, portanto foi mais tranquilo e sem muitas dificuldades aplicar os conceitos vistos anteriormente. 
@@ -776,6 +782,8 @@ mkdir -p nginx
 mkdir -p ./nginx/nginx.conf
 ```
 Gostaria de salientar também que fiz algumas alterações no código do repositório da Fiber para que a execução fosse feita com sucesso. Ao final utilizasse do comando `docker-compose up --build` e assim tendo uma página sendo acessada atráves do `http://localhost:8080` e as 5 instâncias do serviço operam sem conflitos de porta e fazendo o redirecionamento semelhantemente a um load balance
+
+--------------------------------------------------------------------------
 
 ## 7º Exercício
 Neste exercício onde o reposítório do [MEAN todo](https://github.com/luanphandinh/mean-todo) também encontrava-se forá do ar neste caso optei por executar o exercício de manieira a utilizar as tecnologias porém ao invés de uma aplicação de anotação de tarefas fora uma aplicação de registro de livros, podendo retira-los, atualiza-los e até busrca unitariamente atráves do ID.
@@ -956,6 +964,8 @@ CMD ["npm","start"]
 ```
 Referente ao exercício eu mudei bastante a ideia de resolução porém utilizei as tecnologias como haviam sido empregadas e objetificadas, único porém é que para utilizar do cadastro, da listagem, busca e deletagem de livros tive que fazer uso de um gerenciador de API para colocar em uso o endereço `http://localhost:3000/livros` e fazendo POST, GET e DELETE gerenciado de API, funcionou porém creio que não foi com está ideia que foi proposto o exercício.
 
+--------------------------------------------------------------------------
+
 ## 8º Exercício
 Este exercício em comparação aos outros foi até que tranquilo porém exigiu bastante entendimento sobre as demais aplicações utilizadas fora o Docker.
 ```
@@ -1038,6 +1048,8 @@ DATABASES = {
 }
 ```
 E para finalizar a configuração dos arquivos executamos o comando `django-admin startproject core .` que fará a inserção dos arquivos restantes do django. E por fim utilizamos o comando `docker-compose up --build` e acessamos a aplicação via `http://localhost:8000`
+
+--------------------------------------------------------------------------
 
 ## 9º Exercício
 Finalizando a lista de exercícios, este exercício mesmo sendo classificado como díficil fora mais fácil do que outros no nível médio que tinha a documentação descontinuada.
